@@ -15,7 +15,6 @@ docker run -it python
 
 docker compose up
 
-
 code % ls
 code % cd ..
 api % ls

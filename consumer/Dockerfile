@@ -1,0 +1,13 @@
+FROM python:latest
+
+COPY requirements.txt /tmp/
+RUN pip3 install -r /tmp/requirements.txt
+VOLUME /app
+WORKDIR /app
+
+EXPOSE 80
+COPY code/consumer.py .
+
+ENTRYPOINT [ "python" ]
+
+CMD [ "consumer.py" ]
